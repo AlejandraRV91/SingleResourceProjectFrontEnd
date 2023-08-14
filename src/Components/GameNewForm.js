@@ -2,27 +2,28 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const API = process.env.REACT_APP_API_URL;
+
 const GameNewForm = () => {
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState("");
     const [picture, setPicture] = useState("");
     const [genre, setGenre] = useState("");
-    const [creationDate, setCreationDate] = useState("");
+    const [creation_date, setCreationDate] = useState("");
 
     function handleSubmit(e) {
         e.preventDefault();
         axios
-            .post("http://localhost:3345/games", {
+            .post(`${API}/games`, {
                 rating,
                 title,
                 picture,
                 genre,
-                // is_favorite,
-                // creation_date,
+                creation_date,
             })
-            .then(function (response) {
-                navigate("/");
+            .then(() => {
+                navigate("/games");
             })
             .catch(function (error) {
                 console.log(error);
@@ -34,7 +35,7 @@ const GameNewForm = () => {
             <h3>Add a New Game</h3>
 
             <form onSubmit={handleSubmit}>
-                <label for="image">Image</label>
+                <label htmlFor="image">Image</label>
                 <input
                 onChange={(e) => setPicture(e.target.value)}
                 id="image"
@@ -43,25 +44,31 @@ const GameNewForm = () => {
                 value={picture}
                 />
 
-                <label for="game-title">Title</label>
+                <br></br>
+
+                <label htmlFor="title">Title</label>
                 <input
                 onChange={(e) => setTitle(e.target.value)}
-                id="game-title"
-                name="game-title"
+                id="title"
+                name="title"
                 type="text"
                 value={title}
                 />
 
-                <label for="creation-date">Date Created</label>
+                <br></br>
+
+                <label htmlFor="creation_date">Creation Date</label>
                 <input
                 onChange={(e) => setCreationDate(e.target.value)}
-                id="creation-date"
-                name="creation-date"
+                id="creation_date"
+                name="creation_date"
                 type="text"
-                value={creationDate}
+                value={creation_date}
                 />
 
-                <label for="genre">Genre</label>
+                <br></br>
+
+                <label htmlFor="genre">Genre</label>
                 <input
                 onChange={(e) => setGenre(e.target.value)}
                 id="genre"
@@ -70,7 +77,9 @@ const GameNewForm = () => {
                 value={genre}
                 />
 
-                <label for="rating">Rating</label>
+                <br></br>
+
+                <label htmlFor="rating">Rating</label>
                 <input
                 onChange={(e) => setRating(e.target.value)}
                 id="rating"
@@ -78,6 +87,9 @@ const GameNewForm = () => {
                 type="text"
                 value={rating}
                 />
+
+                <br></br>
+                
                 <input type="submit" value="submit" />
             </form>
         </div>

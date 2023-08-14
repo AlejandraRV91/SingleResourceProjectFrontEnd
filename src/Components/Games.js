@@ -22,15 +22,11 @@ const Games = () => {
 
     return (
         <div className="Games">
-            <section>
-                <table>
-                    <tbody>
-                        {games.map((game) => {
-                            return <Game key={game.id} game={game} />;
-                        })}
-                    </tbody>
-                </table>
-            </section>
+            <div className="info">
+                {games.map((game) => {
+                    return <Game key={game.id} game={game} />;
+                })}
+            </div>
         </div>
     );
 };
