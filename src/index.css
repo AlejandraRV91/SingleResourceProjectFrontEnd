@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: row;
   border: 1px solid black;
-  background-color: blueviolet;
+  background-color: #8a2be2;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -27,18 +27,20 @@ a {
   text-decoration: none;
   color: black;
   font-size: large;
-  font-family: 'Games', sans-serif;
 }
 
 .add-game {
   border-radius: 5px;
   margin-left: 450px;
   padding: 6px;
+  font-family: 'Games', sans-serif;
+  background-color: #2e2be2;
 }
 
 .all-games {
   margin-left: 300px;
   margin-top: 10px;
+  font-family: 'Games', sans-serif;
 }
 
 .content {
