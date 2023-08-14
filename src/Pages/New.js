@@ -3,7 +3,8 @@ import GameNewForm from "../Components/GameNewForm";
 
 const New = () => {
     return (
-        <div>
+        <div className="new-page">
+            <h1 className='new-h1'>New Game</h1>
             <GameNewForm />
         </div>
     )

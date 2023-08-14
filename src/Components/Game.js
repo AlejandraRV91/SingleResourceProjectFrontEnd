@@ -5,12 +5,12 @@ const Game = ( { game }) => {
     return (
         <div className="game-card">
             <Link to={`/games/${game.id}`}>
-                <img src={game.picture} alt={`${game.title} img`} width="42" height="42"/>
+                <img src={game.picture} alt={`${game.title} img`} width="250px" />
             </Link> 
             <br></br>
-            <div className="name-and-health">
+            <div className="title-and-favorite">
                 <br></br>
-                <h6>{game.name}</h6>{" "}
+                <h6>{game.title}</h6>{" "}
             <span> {game.is_favorite ?  <span>❤️</span> : <span> ♡ </span>}</span>
             <br></br>
             <br></br>

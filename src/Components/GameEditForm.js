@@ -46,7 +46,7 @@ const GameEditForm = () => {
     return (
         <div className="Edit">
             <form onSubmit={handleSubmit}>
-                <label htmlFor="title">Title:</label>
+                <label htmlFor="title" className="edit_labels">Title:</label>
                 <input
                     id="title"
                     value={edit.title}
@@ -58,7 +58,7 @@ const GameEditForm = () => {
 
                 <br></br>
 
-                <label htmlFor="creation_date">Creation Date:</label>
+                <label htmlFor="creation_date" className="edit_labels">Creation Date:</label>
                 <input
                     id="creation_date"
                     value={edit.creation_date}
@@ -69,7 +69,7 @@ const GameEditForm = () => {
 
                 <br></br>
 
-                <label htmlFor="genre">Genre:</label>
+                <label htmlFor="genre" className="edit_labels">Genre:</label>
                 <input
                     id="genre"
                     value={edit.genre}
@@ -80,7 +80,7 @@ const GameEditForm = () => {
 
                 <br></br>
 
-                <label htmlFor="rating">Rating:</label>
+                <label htmlFor="rating" className="edit_labels">Rating:</label>
                 <input
                     id="rating"
                     value={edit.rating}
@@ -90,7 +90,7 @@ const GameEditForm = () => {
 
                 <br></br>
 
-                <label htmlFor="picture">Picture:</label>
+                <label htmlFor="picture" className="edit_labels">Picture:</label>
                 <input
                     id="picture"
                     type="text"
@@ -101,10 +101,10 @@ const GameEditForm = () => {
 
                 <br></br>
 
-                <input type="submit" />
+                <input className="edit-submit" type="submit" style={{color:" rgb(0, 0, 0)"}}/>
             </form>
             <Link to={`/games/${id}`}>
-                <button>Nevermind!</button>
+                <button className="edit-button">Nevermind!</button>
             </Link>
         </div>
     );

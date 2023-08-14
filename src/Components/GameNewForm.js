@@ -32,10 +32,9 @@ const GameNewForm = () => {
 
     return (
         <div>
-            <h3>Add a New Game</h3>
 
             <form onSubmit={handleSubmit}>
-                <label htmlFor="image">Image</label>
+                <label htmlFor="image" className="new_labels">Image</label>
                 <input
                 onChange={(e) => setPicture(e.target.value)}
                 id="image"
@@ -46,7 +45,7 @@ const GameNewForm = () => {
 
                 <br></br>
 
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title" className="new_labels">Title</label>
                 <input
                 onChange={(e) => setTitle(e.target.value)}
                 id="title"
@@ -57,7 +56,7 @@ const GameNewForm = () => {
 
                 <br></br>
 
-                <label htmlFor="creation_date">Creation Date</label>
+                <label htmlFor="creation_date" className="new_labels">Creation Date</label>
                 <input
                 onChange={(e) => setCreationDate(e.target.value)}
                 id="creation_date"
@@ -68,7 +67,7 @@ const GameNewForm = () => {
 
                 <br></br>
 
-                <label htmlFor="genre">Genre</label>
+                <label htmlFor="genre" className="new_labels">Genre</label>
                 <input
                 onChange={(e) => setGenre(e.target.value)}
                 id="genre"
@@ -79,7 +78,7 @@ const GameNewForm = () => {
 
                 <br></br>
 
-                <label htmlFor="rating">Rating</label>
+                <label htmlFor="rating" className="new_labels">Rating</label>
                 <input
                 onChange={(e) => setRating(e.target.value)}
                 id="rating"
@@ -90,7 +89,7 @@ const GameNewForm = () => {
 
                 <br></br>
                 
-                <input type="submit" value="submit" />
+                <input classname="new-submit" type="submit" value="submit" style={{color:" rgb(0, 0, 0)"}}/>
             </form>
         </div>
     )

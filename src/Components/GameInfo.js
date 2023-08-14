@@ -44,7 +44,7 @@ const GameInfo = () => {
                         src={is_favorite ? heart_solid : heart_outline} 
                         height="20px" 
                         width="20px" 
-                        alt="healthy-unhealthy" 
+                        alt="favorite-notfavorite" 
                     />
                 </h3>
                 <br></br>
@@ -57,7 +57,7 @@ const GameInfo = () => {
                 <h4>Rating: {rating}</h4>
                 </container>
 
-                <div className="d=flex-show=buttons">
+                <div className="d-flex-show-buttons">
                     <div>
                         <button className="btn btn-dark" onClick={goBack}>
                             Back
