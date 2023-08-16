@@ -11,6 +11,8 @@ import Home from './Pages/Home';
 import Index from './Pages/Index';
 import New from './Pages/New';
 import Show from './Pages/Show';
+import four0Four from "./Pages/404";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -26,8 +28,10 @@ function App() {
 
             <Route exact path='games/:id' element={<Show />} />
             <Route path='/games/:id/edit' element={<Edit />} />
+            <Route path="*" element={<four0Four />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
     </div>
   );
